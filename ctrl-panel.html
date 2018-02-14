@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Панель управления</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, maximum-scale=1">
+	<meta name="robots" content="noindex,nofollow">
+
+	<meta property="og:image" content="img/tool-0002.png">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/admin-panel.min.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="container container-page header-inner">
+			<img src="img/logo.svg" class="header-logo" width="160" height="160" alt="Beer Tap Bar - Крафтовый бар в Омске">
+			<button class="navigation-toggle"><span></span></button>
+			<nav class="navigation">
+				<ul class="navigation-list">
+					<li class="navigation-item">
+						<a href="index.html" class="navigation-link">Главная</a>
+					</li>
+					<li class="navigation-item">
+						<a href="about.html" class="navigation-link">О нас</a>
+					</li>
+					<li class="navigation-item">
+						<a href="products.html" class="navigation-link">Наше меню</a>
+					</li>
+					<li class="navigation-item">
+						<a href="events.html" class="navigation-link">Афиша</a>
+					</li>
+					<li class="navigation-item">
+						<a href="contacts.html" class="navigation-link">Контакты</a>
+					</li>
+					<li class="navigation-item">
+						<a href="contacts.html" class="navigation-link navigation-link-active">Админка</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main class="main">
+		<div class="container container-page">
+			<div class="main-content container">
+				<div class="main-header">
+					<h2 class="main-title">Панель управления</h2>
+				</div>
+				<div class="admin">
+					<div class="settings">
+						<div class="settings-header">
+							<div class="settings-title">Настройки доступа</div>
+							<!-- <a href="#" class="settings-toggle" title="свернуть / развернуть"></a> -->
+						</div>
+						<div class="settings-main">
+							<table>
+								<tr>
+									<td><b>E-mail администратора:</b></td>
+									<td><input class="textinput settings-textinput" type="text" value="beertapbar@gmail.com" disabled></td>
+								</tr>
+								<tr>
+									<td><b>Ссылка для входа в ПУ:</b></td>
+									<td>beertapbar.ru/admin.php?hash=sadqwe12312jk3b12jb3k12jb</td>
+								</tr>
+							</table>
+							<button class="button button-small" type="button" name="button">Генерировать новую ссылку</button>
+						</div>
+					</div>
+					<div class="qfilter">
+						<a class="qfilter-item qfilter-item-active">All</a>
+						<a class="qfilter-item">Галерея</a>
+						<a class="qfilter-item">Категории</a>
+						<a class="qfilter-item">Ассортимент</a>
+						<a class="qfilter-item">Афиша</a>
+					</div>
+					<div class="admin-wrapper">
+						<div class="datatable">
+							<div class="datatable-header">
+								<div class="datatable-title">
+									Фотогалерея
+									<!--Одновременно visible - максимум 10! -->
+								</div>
+								<div class="datatable-empty">
+									Здесь пока нет записей. Нажмите чтобы добавить первую.
+								</div>
+							</div>
+							<table>
+								<thead>
+									<tr>
+										<th>
+											ID
+										</th>
+										<th>
+											<img src="img/eye.svg" alt="" width="16">
+										</th>
+										<th>
+											<img src="img/pic.svg" alt="" width="16">
+										</th>
+										<th>
+											alt
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="datatable-row">
+										<td class="datatable-item datatable-item-id">
+											1
+										</td>
+										<td class="datatable-item datatable-item-visible">
+											<input type="checkbox" name="" checked title="скрыть / показать">
+										</td>
+										<td class="datatable-item datatable-item-pic">
+											<img src="img/bg.jpg" alt="">
+										</td>
+										<td class="datatable-item datatable-item-alt">
+											for example: Ассортиманет пива Beer Tap Bar
+										</td>
+									</tr>
+									<tr class="datatable-row">
+										<td class="datatable-item datatable-item-id">
+											2
+										</td>
+										<td class="datatable-item datatable-item-visible">
+											<input type="checkbox" name="" checked title="скрыть / показать">
+										</td>
+										<td class="datatable-item datatable-item-pic">
+											<img src="img/bg2.jpg" alt="">
+										</td>
+										<td class="datatable-item datatable-item-alt">
+											for example: барная стойка с подцветкой
+										</td>
+									</tr>
+									<tr>
+										<td colspan="4">
+											<button class="datatable-button-add" type="button" title="Добавить категорию">+</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="datatable-footer">
+								<ul class="pagination">
+									<li class="pagination-item pagination-item-disabled">
+										Первая
+									</li>
+									<li class="pagination-item pagination-item-active">
+										1
+									</li>
+									<li class="pagination-item">
+										2
+									</li>
+									<li class="pagination-item">
+										3
+									</li>
+									<li class="pagination-item pagination-item-disabled">
+										...
+									</li>
+									<li class="pagination-item">
+										9
+									</li>
+									<li class="pagination-item">
+										10
+									</li>
+									<li class="pagination-item">
+										Последняя
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="popup">
+							<div class="popup-shadow"></div>
+							<div class="popup-inner panel panel-small">
+								<div class="panel-header">
+									<span>ID: 1</span>
+									<a class="icon-button icon-button-delete" title="Удалить запись"></a>
+								</div>
+								<form id="form-gallery" class="panel-form" method="post" name="form-category">
+									<div class="panel-field">
+										<span>Изображение</span>
+										<div class="fileupload">
+											<label class="fileupload-input" title="Файл не выбран">
+												<mark>Файл не выбран</mark>
+												<input type="file" accept="image/jpg,image/jpeg,image/png" name="image" value="">
+											</label>
+											<a class="fileupload-clear" title="Удалить изображение" disabled></a>
+										</div>
+									</div>
+									<div class="panel-field">
+										<label for="">ALT для изображения (рекомендуется заполнять для улучшения SEO)</label>
+										<input class="textinput textinput-block" type="text" name="image-alt" value="">
+									</div>
+									<div class="panel-footer">
+										<button class="button button-lower" type="submit">Сохранить</button>
+										<button class="button button-lower" type="button">Отмена</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="admin-wrapper">
+						<div class="datatable">
+							<div class="datatable-header">
+								<div class="datatable-title">
+									Категории продукции
+									<!--максимум 10! -->
+								</div>
+								<div class="datatable-empty">
+									Здесь пока нет записей. Нажмите чтобы добавить первую.
+								</div>
+							</div>
+							<table>
+								<thead>
+									<tr>
+										<th>
+											ID
+										</th>
+										<th>
+											<img src="img/eye.svg" alt="" width="16">
+										</th>
+										<th>
+											Название
+										</th>
+										<th>
+											Тип
+										</th>
+										<th>
+											Пояснение
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="datatable-row">
+										<td class="datatable-item datatable-item-id">
+											1
+										</td>
+										<td class="datatable-item datatable-item-visible">
+											<input type="checkbox" name="" checked title="скрыть / показать">
+										</td>
+										<td class="datatable-item datatable-item-name">
+											Beer Tap Brewery
+										</td>
+										<td class="datatable-item datatable-item-type">
+											Напитки
+										</td>
+										<td class="datatable-item">
+											пиво от нашей пивоварни
+										</td>
+									</tr>
+									<tr class="datatable-row">
+										<td class="datatable-item datatable-item-id">
+											2
+										</td>
+										<td class="datatable-item datatable-item-visible">
+											<input type="checkbox" name="" checked title="скрыть / показать">
+										</td>
+										<td class="datatable-item datatable-item-name">
+											Beer & Cider
+										</td>
+										<td class="datatable-item datatable-item-type">
+											Напитки
+										</td>
+										<td class="datatable-item">
+											пиво и сидр из регионов
+										</td>
+									</tr>
+									<tr class="datatable-row">
+										<td class="datatable-item datatable-item-id">
+											3
+										</td>
+										<td class="datatable-item datatable-item-visible">
+											<input type="checkbox" name="" checked title="скрыть / показать">
+										</td>
+										<td class="datatable-item datatable-item-name">
+											Food
+										</td>
+										<td class="datatable-item datatable-item-type">
+											Еда
+										</td>
+										<td class="datatable-item">
+										</td>
+									</tr>
+									<tr>
+										<td colspan="5">
+											<button class="datatable-button-add" type="button" title="Добавить категорию">+</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="datatable-footer">
+								<ul class="pagination">
+									<li class="pagination-item pagination-item-disabled">
+										Первая
+									</li>
+									<li class="pagination-item pagination-item-active">
+										1
+									</li>
+									<li class="pagination-item">
+										2
+									</li>
+									<li class="pagination-item">
+										3
+									</li>
+									<li class="pagination-item pagination-item-disabled">
+										...
+									</li>
+									<li class="pagination-item">
+										9
+									</li>
+									<li class="pagination-item">
+										10
+									</li>
+									<li class="pagination-item">
+										Последняя
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="popup">
+							<div class="popup-shadow"></div>
+							<div class="popup-inner panel panel-small">
+								<div class="panel-header">
+									<span>ID: 1</span>
+									<a class="icon-button icon-button-delete" title="Удалить запись"></a>
+								</div>
+								<form id="form-category" class="panel-form" method="post" name="form-category">
+									<div class="panel-field">
+										<label for="">Название категории*</label>
+										<input class="textinput textinput-block" type="text" name="name" value="" required>
+									</div>
+									<div class="panel-field">
+										<label for="">Тип*</label>
+										<select class="textinput textinput-block" name="type">
+											<option value="0" hidden selected>Не выбрано</option>
+											<option value="1">Еда</option>
+											<option value="2">Напитки</option>
+										</select>
+									</div>
+									<div class="panel-field">
+										<label for="">Пояснение (при необходимости)</label>
+										<input class="textinput textinput-block" type="text" name="description" value="">
+									</div>
+									<div class="panel-footer">
+										<button class="button button-lower" type="submit">Сохранить</button>
+										<button class="button button-lower" type="button">Отмена</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="admin-wrapper">
+						<div class="datatable">
+							<div class="datatable-header">
+								<div class="datatable-title">
+									Ассортимент продукции
+								</div>
+								<div class="datatable-empty">
+									Здесь пока нет записей. Нажмите чтобы добавить первую.
+								</div>
+							</div>
+							<table>
+								<thead>
+									<tr>
+										<th>
+											ID
+										</th>
+										<th>
+											<img src="img/eye.svg" alt="" width="16">
+										</th>
+										<th>
+											<img src="img/pic.svg" alt="" width="16">
+										</th>
+										<th>
+											Название
+										</th>
+										<th>
+											Категория
+										</th>
+										<th>
+											Описание
+										</th>
+										<th>
+											Цена
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="datatable-row">
+										<td class="datatable-item datatable-item-id">
+											1
+										</td>
+										<td class="datatable-item datatable-item-visible">
+											<input type="checkbox" name="" checked title="скрыть / показать">
+										</td>
+										<td class="datatable-item datatable-item-pic">
+											<img src="img/item.jpg" alt="">
+										</td>
+										<td class="datatable-item datatable-item-name">
+											IPA Вождь Краснокожих 5,6%
+										</td>
+										<td class="datatable-item datatable-item-category">
+											Beer Tap Brewery
+										</td>
+										<td class="datatable-item datatable-item-desc">
+											Традиционный индийский бледный эль с ярким послевкусием и сильной горечью. В аромате присутствуют хвойно-травянистые ноты.
+										</td>
+										<td class="datatable-item datatable-item-price">
+											0.33л / 190р, 0.5л / 220р
+										</td>
+									</tr>
+									<tr class="datatable-row">
+										<td class="datatable-item datatable-item-id">
+											2
+										</td>
+										<td class="datatable-item datatable-item-visible">
+											<input type="checkbox" name="" checked title="скрыть / показать">
+										</td>
+										<td class="datatable-item datatable-item-pic">
+											<img src="img/boomerang.jpg" alt="">
+										</td>
+										<td class="datatable-item datatable-item-name">
+											IPA Boomerang 5,8%
+										</td>
+										<td class="datatable-item datatable-item-category">
+											Beer Tap Brewery
+										</td>
+										<td class="datatable-item datatable-item-desc">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo adipisci voluptates aperiam quam eligendi nobis dolores repellendus voluptatem porro, repudiandae aliquid culpa, odit quia alias quo quasi tempore vitae molestias.
+										</td>
+										<td class="datatable-item datatable-item-price">
+											0.33л / 190р, 0.5л / 220р
+										</td>
+									</tr>
+									<tr>
+										<td colspan="7">
+											<button class="datatable-button-add" type="button" title="Добавить позицию">+</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="datatable-footer">
+								<ul class="pagination">
+									<li class="pagination-item pagination-item-disabled">
+										Первая
+									</li>
+									<li class="pagination-item pagination-item-active">
+										1
+									</li>
+									<li class="pagination-item">
+										2
+									</li>
+									<li class="pagination-item">
+										3
+									</li>
+									<li class="pagination-item pagination-item-disabled">
+										...
+									</li>
+									<li class="pagination-item">
+										9
+									</li>
+									<li class="pagination-item">
+										10
+									</li>
+									<li class="pagination-item">
+										Последняя
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="popup">
+							<div class="popup-shadow"></div>
+							<div class="popup-inner panel">
+								<div class="panel-header">
+									<span>ID: 1</span>
+									<a class="icon-button icon-button-delete" title="Удалить запись"></a>
+								</div>
+								<form id="form-products" class="panel-form" method="post" name="form-products">
+									<div class="panel-field">
+										<label for="">Название*</label>
+										<input class="textinput textinput-block" type="text" name="name" value="" required>
+									</div>
+									<div class="panel-field">
+										<label for="">Категория*</label>
+										<select class="textinput textinput-block" name="category">
+											<option value="0" hidden selected>Не выбрано</option>
+											<option value="1">Beer Tap Bar</option>
+											<option value="2">Beer & Cider</option>
+											<option value="3">Food</option>
+										</select>
+									</div>
+									<div class="panel-field">
+										<span>Изображение (рекомендуются пропорции 4:3, 1:1)</span>
+										<div class="fileupload">
+											<label class="fileupload-input" title="Файл не выбран">
+												<mark>Файл не выбран</mark>
+												<input type="file" accept="image/jpg,image/jpeg,image/png" name="image" value="">
+											</label>
+											<a class="fileupload-clear" title="Удалить изображение" disabled></a>
+										</div>
+									</div>
+									<div class="panel-field">
+										<label for="">ALT для изображения (рекомендуется заполнять для улучшения SEO)</label>
+										<input class="textinput textinput-block" type="text" name="image-alt" value="">
+									</div>
+									<div class="panel-field">
+										<label for="">Описание</label>
+										<textarea class="textinput textinput-block" name="description" rows="5"></textarea>
+									</div>
+									<fieldset class="panel-field">
+										<legend>Прайс-лист*</legend>
+										<div class="panel-fieldset">
+											Число позиций:
+											<label>
+												<input type="radio" name="count" value="1" checked>	1
+											</label>
+											<label>
+												<input type="radio" name="count" value="2">	2
+											</label>
+											<label>
+												<input type="radio" name="count" value="3">	3
+											</label>
+										</div>
+										<div class="panel-fieldset">
+											<label>
+												Объем (Вес): <input class="textinput textinput-small" type="text" name="amount" value="0" required> л. (гр.)
+											</label>
+											<label>
+												Стоимость: <input class="textinput textinput-small" type="number" name="price" min="0" value="0" required> р.
+											</label>
+										</div>
+									</fieldset>
+									<div class="panel-footer">
+										<button class="button button-lower" type="submit">Сохранить</button>
+										<button class="button button-lower" type="button">Отмена</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="admin-wrapper">
+						<div class="datatable">
+							<div class="datatable-header">
+								<div class="datatable-title">
+									Афиша мероприятий
+								</div>
+								<div class="datatable-empty">
+									Здесь пока нет записей. Нажмите чтобы добавить первую.
+								</div>
+							</div>
+							<table>
+								<thead>
+									<tr>
+										<th>
+											ID
+										</th>
+										<th>
+											<img src="img/eye.svg" alt="" width="16">
+										</th>
+										<th>
+											<img src="img/pic.svg" alt="" width="16">
+										</th>
+										<th>
+											Название
+										</th>
+										<th>
+											Дата
+										</th>
+										<th>
+											Время
+										</th>
+										<th>
+											Описание
+										</th>
+										<th>
+											Цена
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="datatable-row">
+										<td class="datatable-item datatable-item-id">
+											1
+										</td>
+										<td class="datatable-item datatable-item-visible">
+											<input type="checkbox" name="" checked title="скрыть / показать">
+										</td>
+										<td class="datatable-item datatable-item-pic">
+											<img src="img/event.jpg" alt="">
+										</td>
+										<td class="datatable-item datatable-item-name">
+											Корпоративная Вечеринка
+										</td>
+										<td class="datatable-item datatable-item-date">
+											22.12.2017
+										</td>
+										<td class="datatable-item datatable-item-time">
+											19:00
+										</td>
+										<td class="datatable-item datatable-item-desc">
+											В эту пятницу устраиваем корпоративную предновогоднюю вечеринку. Вас ждёт интересная программа, живая музыка, конкурсы и подарки, позитив и весёлое настроения, а также море крафтового пива и горы еды!
+										</td>
+										<td class="datatable-item datatable-item-price">
+											0р
+										</td>
+									</tr>
+									<tr>
+										<td colspan="8">
+											<button class="datatable-button-add" type="button" title="Добавить событие">+</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="datatable-footer">
+								<ul class="pagination">
+									<li class="pagination-item pagination-item-disabled">
+										Первая
+									</li>
+									<li class="pagination-item pagination-item-active">
+										1
+									</li>
+									<li class="pagination-item">
+										2
+									</li>
+									<li class="pagination-item">
+										3
+									</li>
+									<li class="pagination-item pagination-item-disabled">
+										...
+									</li>
+									<li class="pagination-item">
+										9
+									</li>
+									<li class="pagination-item">
+										10
+									</li>
+									<li class="pagination-item">
+										Последняя
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="popup">
+							<div class="popup-shadow"></div>
+							<div class="popup-inner panel panel-small">
+								<div class="panel-header">
+									<span>ID: 1</span>
+									<a class="icon-button icon-button-delete" title="Удалить запись"></a>
+								</div>
+								<form id="form-events" class="panel-form" method="post" name="form-events">
+									<div class="panel-field">
+										<label for="">Название мероприятия*</label>
+										<input class="textinput textinput-block" type="text" name="name" value="" required>
+									</div>
+									<div class="panel-fieldset">
+										<div class="panel-field">
+											<label for="">Дата*:</label>
+											<input class="textinput" type="date" name="date" value="" min="01-01-2018" required>
+										</div>
+										<div class="panel-field">
+											<label for="">Время*:</label>
+											<input class="textinput" type="time" name="time" value="" required>
+										</div>
+									</div>
+									<div class="panel-field">
+										<span>Изображение*</span>
+										<div class="fileupload">
+											<label class="fileupload-input" title="Файл не выбран">
+												<mark>Файл не выбран</mark>
+												<input type="file" accept="image/jpg,image/jpeg,image/png" name="image" value="">
+											</label>
+											<a class="fileupload-clear" title="Удалить изображение" disabled></a>
+										</div>
+									</div>
+									<div class="panel-field">
+										<label for="">ALT для изображения (рекомендуется заполнять для улучшения SEO)</label>
+										<input class="textinput textinput-block" type="text" name="image-alt" value="">
+									</div>
+									<div class="panel-field">
+										<label for="">Описание мероприятия*</label>
+										<textarea class="textinput textinput-block" name="description" rows="8" required></textarea>
+									</div>
+									<div class="panel-field">
+										<label for="">Стоимость входа*</label>
+										<input class="textinput textinput-block" type="number" min="0" name="price" value="0">
+									</div>
+									<div class="panel-footer">
+										<button class="button button-lower" type="submit">Сохранить</button>
+										<button class="button button-lower" type="button">Отмена</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container container-page footer-inner">
+			<div class="row">
+				<div class="col">
+					<h1 class="footer-title">BEER TAP BAR</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<a href="https://vk.com/beertapbar" class="link-social link-social-vk" title="Наша страничка в VK"></a>
+					<a href="https://www.facebook.com/BeerTapBar" class="link-social link-social-fb" title="Наша страничка в Facebook"></a>
+					<a href="https://www.instagram.com/beer_tap_bar" class="link-social link-social-inst" title="Наша страничка в Instagram"></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<strong class="footer-copyright">
+						© 2018 Beer Tap Bar.
+					</strong>
+					<div class="mealbakh">
+						Разработано <a href="http://mealbakh.com">Mealbakh</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- <div class="stub">
+		<div class="container container-page stub-wrap">
+			<div class="stub-inner stub-inner-col">
+				<span>Упс!</span>
+				<span>Извините, ссылка не действительна.</span>
+			</div>
+			<div class="stub-inner stub-inner-col">
+				<a href="#" class="link stub-link">Восстановить доступ?</a>
+				<a href="index.html" class="link stub-link">Перейти на сайт</a>
+			</div>
+			<div class="stub-info">
+				<div class="stub-inner">
+					<span>
+						Если вы являетесь администратором этого сайта и потеряли доступ, введите ваш электронный адрес, чтобы мы могли отправить на него информацию для восcтановления доступа. Либо нажмите <a href="index.html" class="link">сюда</a>, чтобы вернуться на главную страницу сайта.
+					</span>
+				</div>
+				<div class="stub-inner">
+					<input class="textinput stub-input" type="email" name="email" placeholder="E-mail">
+					<button class="button button-small stub-button" type="button" name="button">Отправить</button>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/scripts.min.js"></script>
+
+	<script>
+
+	$('.datatable-empty, .datatable-button-add, .datatable-row').click(function(){
+		$(this).closest('.datatable').next($('.popup')).fadeIn(200).css('display', 'flex');
+	});
+
+	$('.popup-shadow').click(function(){
+		$(this).closest('.popup').fadeOut(300);
+	});
+
+	$('.panel-footer').find('button:eq(1)').click(function(){
+		$(this).closest('.popup').fadeOut(300);
+	});
+
+
+	$('.datatable').each(function(){
+
+		let elemCounts = $(this).find('.datatable-row').length;
+
+		if (elemCounts > 0) {
+			$(this).find('.datatable-empty').hide();
+		}
+		else {
+			$(this).find('.datatable-empty').show();
+			$(this).find('table').hide();
+		}
+	});
+
+
+	$('.settings').find('.settings-toggle').click(function(){
+		$(this).closest('.settings').find('.settings-main').slideToggle(200);
+	});
+
+
+	$('.stub').find('.link:eq(0)').click(function(){
+
+		$(this).closest('.stub-inner').hide();
+		$(this).closest('.stub').find('.stub-info').show();
+
+	});
+
+
+
+	</script>
+
+</body>
+</html>
